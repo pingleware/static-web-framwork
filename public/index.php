@@ -33,26 +33,33 @@ $_DEBUG[] =  "The Current page: $page \n";
 
 
 //Require the config files 
-require_once("../config/GLOBAL_CONFIG.php");	//Requite the global config class
+require_once("../app/config/GLOBAL_CONFIG.php");	//require the global config class
 if(file_exists("../app/config/" . $page . "_config.php")){
-	require_once("../app/config/" . $page . "_config.php");	//Requite this pages config class 
+	require_once("../app/config/" . $page . "_config.php");	//Require this pages config class 
 }
 else{
 	new alerts("<p>The page \"" .$_GET['page'] . "\" doesn't have a config file! Loading the default config. </p>", "alert-danger");
-	require_once("../app/config/default_config.php");	//Requite this pages config class 
+	require_once("../app/config/default_config.php");	//Require this pages config class 
 }
 
-//Require the model files if they exist 
+//Require the model files if they exist (This is where to perform ajax calls)
 
 
 
+//Don't render HTML for this page 
+if(!config::$render){
 
+
+}
 
 
 
 
 
 ?>
+
+
+<?php if (config::$render): ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -191,3 +198,5 @@ else{
 
 
 </html>
+
+<?php endif; ?>
