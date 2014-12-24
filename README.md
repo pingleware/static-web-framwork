@@ -1,13 +1,22 @@
 Simple Static Web Framework
 ==============
-Simple PHP static web framework. All pages are routed through the index.php page setting the GET['page'] varaible to different pages to allow multiple pages. 
+Simple PHP static web framework. All pages are routed through the index.php page setting the GET['page'] variable to different pages to allow multiple pages. 
 
-<!-- 
+
 Features
 --------------
-- Allele vs. Generation Graphing
-- Variables to modify the allele frequency (Population size, number generations, selection variables, mutation, migration, population bottleneck, and assortative mating)
+- The entire project has an APPVARS file that contains global information 
+- Each page has an associated config file named "controller-foo.php" that contains page title, description, css/js to include, optional headers and footers.
+- Each page can but doesn't need to have an associated model that can define various aspects of a potential object. However, since this is meant to be a mostly static framework it can be ignored. 
+- Set up with GRUNT to allow automatic LESS compiling/watching by running the CLI command grunt in the project directory
 
+Upcoming Features 
+--------------
+- Create scripts to automatically create associated config files with each page and automatically fill out the required variables.
+
+
+
+<!-- 
 Third Party Components 
 --------------
 - [Less](http://lesscss.org/) Styling 
