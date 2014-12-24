@@ -178,10 +178,10 @@ else{
 	<!--LAZY SCRIPTS --> 
 	<?php 
 	//Load all of the global javascript 
-	foreach(config::$global_javascript as $javascript) echo "<script src='$javascript.js'></script>";
+	foreach(config::$global_javascript as $javascript) echo "<script src='$javascript'></script>";
 
 	//Load the rest of the javascript  
-	foreach(config::$javascript as $javascript) echo "<script src='$javascript.js'></script>";
+	foreach(config::$javascript as $javascript) echo "<script src='js/$javascript.js'></script>";
 	
 	?>
 	<!--LAZY SCRIPTS --> 
