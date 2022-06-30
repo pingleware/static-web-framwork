@@ -29,3 +29,13 @@ Main Components
 - [Main JavaScript Class](https://github.com/JoshuaRogan/genetics/blob/master/public/js/population_genetics.js "JavaScript Class")
 - [Client JavaScript Class](https://github.com/JoshuaRogan/genetics/blob/master/public/js/index.js "JavaScript Class") -->
 
+# Getting Started with Grunt
+See https://gruntjs.com/getting-started 
+
+# Getting Started
+Install the CLI version of PHP, then from the static-web-framwork directory, issue the command
+
+    > php -S localhost:8080 -t public
+
+Now open your browser to http://localhost:8080
+

@@ -3,7 +3,12 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 
 //Autoloading of classes
-function __autoload($class_name) {
+spl_autoload_register("autoload");
+/**
+ * renamed __autoload to autoload when using spl_autoload_register to fix
+ * Deprecated: __autoload() is deprecated, use spl_autoload_register() instead in X:\static-web-framwork\public\index.php on line 7
+ */
+function autoload($class_name) {
 	
 	if(file_exists("../lib/util/$class_name" . ".php")){
 		require_once ("../lib/util/$class_name" . ".php");
